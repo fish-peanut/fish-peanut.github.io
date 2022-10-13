@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="divport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        .bgpic {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+        }
+
+        .range {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            width: 30%;
+            height: 7%;
+            text-align: center;
+            font-size: 40px;
+            background-color: #fff;
+            margin-bottom: 5%;
+            line-height: 100%;
+        }
+
+        .table {
+            width: 70%;
+            color: #333333;
+        }
+
+        .tab_tr {
+            width: 100%;
+            position: relative;
+            height: 70px;
+            border-top: #E8E8E8 solid 1px;
+            border-bottom: #E8E8E8 solid 1px;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tr_td1 {
+            width: 15%;
+            height: 70px;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tr_td2 {
+            width: 60%;
+            height: 70px;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tr_td3 {
+            width: 25%;
+            height: 70px;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text {
+            font-size: 30px;
+            font-family: PingFangHK-Regular, PingFangHK;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 40px;
+        }
+
+        .th_text {
+            font-size: 30px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 30px;
+        }
+
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?iawvpf');
+            src: url('fonts/icomoon.eot?iawvpf#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?iawvpf') format('truetype'),
+                url('fonts/icomoon.woff?iawvpf') format('woff'),
+                url('fonts/icomoon.svg?iawvpf#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        .out {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: 'icomoon';
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bgpic">
+        <img src="images/背景.jpeg" alt="">
+    </div>
+    <div class="range">
+        <div class="title">
+            排行榜
+        </div>
+        <div class="table">
+            <div class="tab_tr">
+                <div class="tr_td1 text"><span>1</span></div>
+                <div class="tr_td2 text"><span>ikkk</span></div>
+                <div class="tr_td3 text"><span>50</span></div>
+            </div>
+            <div class="tab_tr">
+                <div class="tr_td1 text"><span>2</span></div>
+                <div class="tr_td2 text"><span>xiao-yu</span></div>
+                <div class="tr_td3 text"><span>48</span></div>
+            </div>
+            <div class="tab_tr">
+                <div class="tr_td1 text"><span>3</span></div>
+                <div class="tr_td2 text"><span>Xuui</span></div>
+                <div class="tr_td3 text"><span>30</span></div>
+            </div>
+            <div class="tab_tr">
+                <div class="tr_td1 text"><span>4</span></div>
+                <div class="tr_td2 text"><span>Miss.z</span></div>
+                <div class="tr_td3 text"><span>29</span></div>
+            </div>
+            <div class="tab_tr">
+                <div class="tr_td1 text"><span>5</span></div>
+                <div class="tr_td2 text"><span>Lucy</span></div>
+                <div class="tr_td3 text"><span>20</span></div>
+            </div>
+            <div class="tab_tr">
+                <div class="tr_td1 text"><span>6</span></div>
+                <div class="tr_td2 text"><span>ggb</span></div>
+                <div class="tr_td3 text"><span>18</span></div>
+            </div>
+            <div class="tab_tr">
+                <div class="tr_td1 text"><span>7</span></div>
+                <div class="tr_td2 text"><span>大鸟转转转</span></div>
+                <div class="tr_td3 text"><span>6</span></div>
+            </div>
+            <div class="tab_tr">
+                <div class="tr_td1 text"><span>8</span></div>
+                <div class="tr_td2 text"><span>路人甲</span></div>
+                <div class="tr_td3 text"><span>5</span></div>
+            </div>
+            <div class="tab_tr">
+                <div class="tr_td1 text"><span>9</span></div>
+                <div class="tr_td2 text"><span>路人乙</span></div>
+                <div class="tr_td3 text"><span>4</span></div>
+            </div>
+            <div class="tab_tr">
+                <div class="tr_td1 text"><span>10</span></div>
+                <div class="tr_td2 text"><span>野猪</span></div>
+                <div class="tr_td3 text"><span>1</span></div>
+            </div>
+            <div class="tab_tr">
+                <div class="tr_td1 text"><span>-</span></div>
+                <div class="tr_td2 text"><span>我</span></div>
+                <div class="tr_td3 text"><span>-</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="out"></div>
+
+    <script>
+        var title = $(".title");
+        var t_h = title.css("height");
+        title.css("lineHeight", t_h);
+        var out = $(".out");
+        out.on("touchend", function () {
+            window.location.href = "mode.html";
+        })
+    </script>
+</body>
+
+</html>

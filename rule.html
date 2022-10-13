@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="commom.css">
+    <script src="js/jquery.min.js"></script>
+    <style>
+        body {
+            background: url("images/背景.jpeg") no-repeat 50% 30%;
+            background-size: cover;
+        }
+
+        .rule {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            width: 35%;
+            height: 10%;
+            text-align: center;
+            font-size: 40px;
+            background-color: #fff;
+            margin-bottom: 5%;
+        }
+
+        .detail {
+            width: 80%;
+            /* height: 50%; */
+            font-size: 20px;
+            background-color: #fff;
+            color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rule">
+        <div class="title">
+            规则
+        </div>
+        <div class="detail">
+            游戏规则：本游戏采用1v1回合制，玩家各拥有一个九宫格，在回合内要先后进行一次投骰子和放置骰子在自己空白的九宫格内的动作。玩家在成功放置骰子后，可以将对手在同一列上的相同点数的骰子吃掉(┗|｀O′|┛ 嗷~~)。
+            当有一方的九宫格全部填满，则对局结束，计算分数，分高者胜出(( •̀ ω •́ )y)。<br><br>
+            算分规则：某玩家的某列得分 = 各点数 × 此点数在此列出现次数²=>
+
+
+            某玩家的总得分 = 各列得分累加。<br><br>
+            不管有没有看懂，都玩玩看吧！(●ˇ∀ˇ●)
+        </div>
+        <div class="out"></div>
+    </div>
+</body>
+
+<script>
+    var title = $(".title");
+    var t_h = title.css("height");
+    title.css("lineHeight", t_h);
+    var out = $(".out");
+    out.on("touchend", function () {
+        window.location.href = "mode.html";
+    })
+</script>
+
+</html>

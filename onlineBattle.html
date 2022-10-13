@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="commom.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/global.js"></script>
+
+    <style>
+        body {
+            background: url("images/背景.jpeg") no-repeat 50% 30%;
+            background-size: cover;
+        }
+
+        .tuoguan {
+            position: absolute;
+            bottom: 2%;
+            left: 2%;
+            height: 5%;
+            width: 10%;
+            background-color: rgb(254, 250, 131);
+        }
+
+        .tuoguan button {
+            height: 100%;
+            width: 100%;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .robot {
+            font-family: 'icomoon';
+            position: absolute;
+            top: 52%;
+            left: 35%;
+            display: none;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game">
+        <div class="table disable">
+            <i id="7"></i><i id="4"></i><i id="1"></i>
+            <i id="8"></i><i id="5"></i><i id="2"></i>
+            <i id="9"></i><i id="6"></i><i id="3"></i>
+        </div>
+        <div class="mid">
+            <div class="id">
+                <i>对手id</i>
+                <i>玩家id</i>
+            </div>
+            <div class="round">
+                <i></i>
+                <i></i>
+            </div>
+            <div class="touzi">
+                <img src="images/11.png" alt="">
+                <img src="images/22.png" alt="">
+                <img src="images/33.png" alt="">
+                <img src="images/44.png" alt="">
+                <img src="images/55.png" alt="">
+                <img src="images/66.png" alt="">
+                <img src="images/touzi.gif" alt="">
+            </div>
+        </div>
+        <div class="table disable">
+            <i id="7"></i><i id="4"></i><i id="1"></i>
+            <i id="8"></i><i id="5"></i><i id="2"></i>
+            <i id="9"></i><i id="6"></i><i id="3"></i>
+        </div>
+        <div class="tuoguan">
+            <button>托管</button>
+        </div>
+        <div class="mask">
+            <div class="close">
+                <div class="score"></div>
+            </div>
+        </div>
+    </div>
+    <div class="out"></div>
+    <div class="robot"></div>
+
+    <script>
+        var table = $(".table");
+        var t_h = table.css("height");
+        table.css("width", t_h);
+        var id_i = $(".id i");
+        var i_h = id_i.css("height");
+        id_i.css("lineHeight", i_h);
+        var round_i = $(".round i");
+        round_i.css("height", i_h)
+        round_i.css("lineHeight", i_h);
+        var out = $(".out");
+        out.on("touchend", function () {
+            window.location.href = "mode.html";
+        })
+    </script>
+</body>
+
+</html>

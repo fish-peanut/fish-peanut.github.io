@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="commom.css">
+    <script src="js/jquery.min.js"></script>
+    <style>
+        .bgpic {
+            height: 100%;
+            width: 100%;
+        }
+
+        .bgpic img {
+            height: calc(100% / 3);
+            width: 100%;
+        }
+
+        .mode {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 60%;
+            width: 60%;
+            background-color: rgba(205, 179, 247, .85);
+        }
+
+        .mode button {
+            flex: 0.2;
+            color: yellow;
+            font-size: 35px;
+            width: 70%;
+            border-radius: 10px;
+            background-color: rgb(164, 173, 179)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bgpic">
+        <img src="images/骰子背景2.jpeg" alt="">
+        <img src="images/骰子背景2.jpeg" alt="">
+        <img src="images/骰子背景2.jpeg" alt="">
+    </div>
+    <div class="mode">
+        <button>玩家对战</button>
+        <button>人机对战</button>
+        <button>规则</button>
+        <button>排行榜</button>
+    </div>
+    <div class="out"></div>
+    <script>
+        var btn = $(".mode").find("button")
+        btn.eq(0).on("touchend", function () {
+            window.location.href = "playerBattle.html"
+        })
+        btn.eq(1).on("touchend", function () {
+            window.location.href = "humanVSAI.html"
+        })
+        btn.eq(2).on("touchend", function () {
+            window.location.href = "rule.html"
+        })
+        btn.eq(3).on("touchend", function () {
+            window.location.href = "rankList.html"
+        })
+        var out = $(".out");
+        out.on("touchend", function () {
+            window.location.href = "index.html";
+        })
+    </script>
+</body>
+
+</html>
