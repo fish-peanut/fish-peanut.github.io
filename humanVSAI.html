@@ -13,9 +13,18 @@
     <script src="js/AI.js"></script>
 
     <style>
-        body {
-            background: url("images/背景.jpeg") no-repeat 50% 30%;
-            background-size: cover;
+        .bgpic {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+        }
+
+        .bgpic img {
+            width: 100%;
+            height: 100%;
         }
 
         .robot {
@@ -29,6 +38,9 @@
 </head>
 
 <body>
+    <div class="bgpic">
+        <img src="images/背景.jpeg" alt="">
+    </div>
     <div class="game">
         <div class="table disable">
             <i id="7"></i><i id="4"></i><i id="1"></i>
@@ -36,13 +48,15 @@
             <i id="9"></i><i id="6"></i><i id="3"></i>
         </div>
         <div class="mid">
-            <div class="id">
-                <i>二狗AI</i>
-                <i>玩家</i>
-            </div>
-            <div class="round">
-                <i></i>
-                <i></i>
+            <div class="block">
+                <div class="id">
+                    <i>二狗AI</i>
+                    <i>玩家</i>
+                </div>
+                <div class="round">
+                    <i></i>
+                    <i></i>
+                </div>
             </div>
             <div class="touzi">
                 <img src="images/11.png" alt="">
@@ -78,6 +92,8 @@
         var round_i = $(".round i");
         round_i.css("height", i_h)
         round_i.css("lineHeight", i_h);
+        var touzi = $(".touzi");
+        touzi.css("width", touzi.css("height"));
         var out = $(".out");
         out.on("touchend", function () {
             window.location.href = "mode.html";
